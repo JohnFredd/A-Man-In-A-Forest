@@ -1,0 +1,36 @@
+# Bytecode de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos temporales de editor
+*.swp
+*.swo
+
+# Archivos de logs y cachés
+*.log
+*.tmp
+*.bak
+*.cache
+
+# Entornos virtuales
+venv/
+env/
+ENV/
+.venv/
+.pip/
+pip-log.txt
+
+# Configuración de editores
+.vscode/
+.idea/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# PyInstaller
+build/
+dist/
+*.spec
