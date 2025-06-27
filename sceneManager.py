@@ -1,9 +1,15 @@
+from scenes.mainMenu import MainMenu
+
 class SceneManager:
 	def __init__(self, game):
-		pass
+		self.game = game
+		self.currentScene = MainMenu(self)
 
 	def update(self):
-		pass
+		self.currentScene.update()
 
 	def draw(self):
-		pass
+		self.currentScene.draw(self.game.screen)
+	
+	def changeScene(self, nextScene):
+		self.currentScene = nextScene
