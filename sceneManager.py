@@ -2,14 +2,14 @@ from scenes.mainMenu import MainMenu
 
 class SceneManager:
 	def __init__(self, game):
-		self.game = game
+		self.screen = game.screen
 		self.currentScene = MainMenu(self)
 
-	def update(self):
-		self.currentScene.update()
+	def update(self, events):
+		self.currentScene.update(events)
 
 	def draw(self):
-		self.currentScene.draw(self.game.screen)
+		self.currentScene.draw()
 	
 	def changeScene(self, nextScene):
 		self.currentScene = nextScene

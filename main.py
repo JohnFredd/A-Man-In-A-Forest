@@ -18,11 +18,13 @@ class Game:
 		while self.running:
 			self.clock.tick(60)
 
-			for event in pygame.event.get():
+			events = pygame.event.get()
+
+			for event in events:
 				if event.type == pygame.QUIT:
 					self.running = False
 
-			self.sceneManager.update()
+			self.sceneManager.update(events)
 			self.updateScreen()
 	
 	def updateScreen(self):
