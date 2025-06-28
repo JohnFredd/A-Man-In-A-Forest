@@ -31,3 +31,7 @@ class Sword(pygame.sprite.Sprite):
 			self.rect.midright = self.playerRect.midleft
 		elif self.direction == "right":
 			self.rect.midleft = self.playerRect.midright
+
+		collided = pygame.sprite.spritecollide(self, self.scene.enemies, False)
+		for enemy in collided:
+			enemy.kill()
