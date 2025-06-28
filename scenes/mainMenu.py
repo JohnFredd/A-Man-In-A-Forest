@@ -1,7 +1,6 @@
-import pygame
 from scenes.baseScene import BaseScene
-from utils.button import Button
-from utils.label import Label
+from ui.button import Button
+from ui.label import Label
 
 class MainMenu(BaseScene):
 	def __init__(self, sceneManager):

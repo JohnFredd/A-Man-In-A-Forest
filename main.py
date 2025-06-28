@@ -1,6 +1,6 @@
 import pygame
 from config import Config
-from sceneManager import SceneManager
+from scenes.sceneManager import SceneManager
 
 class Game:
 	def __init__(self):
