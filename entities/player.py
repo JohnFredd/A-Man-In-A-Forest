@@ -10,7 +10,7 @@ class Player(pygame.sprite.Sprite):
 		self.rect = self.image.get_rect()
 		self.rect.center = position
 		self.velocity = 1
-		self.attackInfo = {"atacking": False, "startAttack": 0, "endAttack": 0, "attackDuration": 250, "attackColdown": 400}
+		self.attackInfo = {"atacking": False, "startAttack": 0, "endAttack": 0, "attackDuration": 250, "attackColdown": 250}
 		self.sword = None
 	
 	def handleEvent(self, event):

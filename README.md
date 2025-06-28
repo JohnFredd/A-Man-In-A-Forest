@@ -2,6 +2,8 @@
 
 **A Man In A Forest** is a 2D action-adventure game built with Python using the **PyGame** library. You play as a man who is lost in a mysterious forest and must defend yourself against wild monsters using your sword. Your mission is to survive through increasingly difficult levels while defeating a variety of enemies.
 
+All this game was developed in less than 24 hours.
+
 ## Gameplay
 
 - You control a lost man armed with a sword.
@@ -65,6 +67,8 @@ A_Man_In_A_Forest/
 ## Contact
 
 Developed by: John Freddy Belalcázar Rojas
+
+Art by: John Freddy Belalcázar Rojas
 
 E-mail: johnfbelalcazar@gmail.com
 

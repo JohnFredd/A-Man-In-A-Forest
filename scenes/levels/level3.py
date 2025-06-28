@@ -11,7 +11,7 @@ from entities.enemy3 import Enemy3
 class Level3(BaseScene):
 	def __init__(self, sceneManager):
 		super().__init__(sceneManager)
-		self.background = Background("lvl1Background")
+		self.background = Background("lvl3Background")
 		self.sprites.add(self.background)
 		self.score = 0
 		self.scoreLabel = Label(0, 0, 1200, 200, "Score: 0", 50, (0,0,0))
@@ -40,7 +40,9 @@ class Level3(BaseScene):
 			self.enemies.append(newEnemy)
 			self.sprites.add(newEnemy)
 			self.lastEnemySpawned = pygame.time.get_ticks()
-			self.spawnEnemy = self.spawnEnemy * 0.7
+			self.spawnEnemy = self.spawnEnemy * 0.75
+			if self.spawnEnemy < 400:
+				self.spawnEnemy = 400
 
 	
 	def goMainMenu(self):

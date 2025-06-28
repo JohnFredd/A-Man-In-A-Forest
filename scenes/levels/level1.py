@@ -20,7 +20,7 @@ class Level1(BaseScene):
 
 		self.enemies = [Enemy1(self, self.background.rect.midleft), Enemy1(self, self.background.rect.midright)]
 		self.sprites.add(self.enemies)
-		self.spawnEnemy = 8000
+		self.spawnEnemy = 7000
 		self.lastEnemySpawned = 0
 	
 	def update(self, events):
@@ -38,6 +38,8 @@ class Level1(BaseScene):
 			self.sprites.add(newEnemy)
 			self.lastEnemySpawned = pygame.time.get_ticks()
 			self.spawnEnemy = self.spawnEnemy * 0.9
+			if self.spawnEnemy < 500:
+				self.spawnEnemy = 500
 
 	
 	def goMainMenu(self):

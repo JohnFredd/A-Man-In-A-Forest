@@ -10,7 +10,7 @@ from entities.enemy2 import Enemy2
 class Level2(BaseScene):
 	def __init__(self, sceneManager):
 		super().__init__(sceneManager)
-		self.background = Background("lvl1Background")
+		self.background = Background("lvl2Background")
 		self.sprites.add(self.background)
 		self.score = 0
 		self.scoreLabel = Label(0, 0, 1200, 200, "Score: 0", 50, (0,0,0))
@@ -40,6 +40,8 @@ class Level2(BaseScene):
 			self.sprites.add(newEnemy)
 			self.lastEnemySpawned = pygame.time.get_ticks()
 			self.spawnEnemy = self.spawnEnemy * 0.8
+			if self.spawnEnemy < 500:
+				self.spawnEnemy = 500
 
 	
 	def goMainMenu(self):
