@@ -3,16 +3,16 @@ import os
 import math
 from entities.sword import Sword
 
-class Enemy1(pygame.sprite.Sprite):
+class Enemy2(pygame.sprite.Sprite):
 	def __init__(self, scene, position):
 		super().__init__()
 		self.scene = scene
-		self.image = pygame.image.load(os.path.join("assets", "enemy1.png")).convert_alpha()
+		self.image = pygame.image.load(os.path.join("assets", "enemy2.png")).convert_alpha()
 		self.rect = self.image.get_rect()
 		self.rect.center = position
 		self.velocity = 1
 		self.lastdamage = 0
-		self.life = 1
+		self.life = 3
 	
 	def update(self):
 		(playerx, playery) = self.scene.player.rect.center

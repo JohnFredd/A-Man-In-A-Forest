@@ -34,4 +34,4 @@ class Sword(pygame.sprite.Sprite):
 
 		collided = pygame.sprite.spritecollide(self, self.scene.enemies, False)
 		for enemy in collided:
-			enemy.kill()
+			enemy.hit()

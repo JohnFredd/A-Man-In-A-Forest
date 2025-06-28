@@ -5,7 +5,6 @@ class Label(pygame.sprite.Sprite):
 		super().__init__()
 		self.image = self.render(width, height, text, textSize, color)
 		self.rect = pygame.Rect(x, y, width, height)
-		self.pressed = False
 
 	def render(self, width, height, text, textSize, color):
 		surface = pygame.Surface((width, height), pygame.SRCALPHA)
