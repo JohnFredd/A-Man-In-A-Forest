@@ -47,8 +47,11 @@ class Level2(BaseScene):
 	def goMainMenu(self):
 		self.sceneManager.changeScene("MainMenu")
 	
+	def goGameOver(self):
+		self.sceneManager.changeScene("GameOver", score=self.score)
+	
 	def playerKilled(self):
-		self.goMainMenu()
+		self.goGameOver()
 	
 	def updateScore(self):
 		self.score += 100
